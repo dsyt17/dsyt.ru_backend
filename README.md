@@ -10,7 +10,7 @@
     - 'avatarUrl'?: string, url
 + ***post*** `/auth/login`
     - 'loginOrEmail': string
-    - 'password'? string
+    - 'password': string
 + ***get*** `/auth/me` (auth only)
 
 ## Users
@@ -22,11 +22,11 @@
 + ***post*** `/posts` (auth only)
     - 'title': string, minLen: 1
     - 'text': string, minLen: 1
-    - 'tags': array,  optional
-    - 'imageUrl': string,  optional
+    - 'tags'?: array
+    - 'imageUrl'?: string
 + ***delete*** `/posts/:id` (auth only)
 + ***patch*** `/posts/:id` (auth only)
     - 'title': string, minLen: 1
     - 'text': string, minLen: 1
-    - 'tags': array,  optional
-    - 'imageUrl': string,  optional
+    - 'tags'?: array
+    - 'imageUrl'?: string
