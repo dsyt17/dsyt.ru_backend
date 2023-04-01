@@ -1,0 +1,55 @@
+{
+    "extends": [
+        "react-app",
+        "plugin:prettier/recommended",
+        "prettier/react"
+    ],
+    "plugins": [
+        "prettier"
+    ],
+    "rules": {
+        "prettier/prettier": [
+            "error",
+            {
+                "endOfLine": "auto"
+            }
+        ],
+        "linebreak-style": "off"
+    },
+    "overrides": [
+        {
+            "files": [
+                "**/*.ts?(x)"
+            ],
+            "rules": {
+                "@typescript-eslint/explicit-module-boundary-types": "off",
+                "import/order": [
+                    "warn",
+                    {
+                        "groups": [
+                            "builtin",
+                            "external",
+                            "internal",
+                            "index"
+                        ],
+                        "pathGroups": [
+                            {
+                                "pattern": "react",
+                                "group": "external",
+                                "position": "before"
+                            }
+                        ],
+                        "pathGroupsExcludedImportTypes": [
+                            "builtin"
+                        ],
+                        "newlines-between": "always-and-inside-groups",
+                        "alphabetize": {
+                            "order": "asc",
+                            "caseInsensitive": true
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
